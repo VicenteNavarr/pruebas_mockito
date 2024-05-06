@@ -37,6 +37,19 @@ public class EmployeeInMemoryRepositoryTest {
 	@Test
 	public void testEmployeeRepositoryFindAll() {
 
+		//creo dos empleados
+		Employee empleado1 = new Employee("1", 50.00);
+		Employee empleado2 = new Employee("2", 150.00);
+
+		//añado a la lista
+		employees.add(empleado1);
+		employees.add(empleado2);
+
+		//compruebo
+		assertThat(employeeRepository.findAll()).contains(empleado1, empleado2);
+
+
+
 	}
 
 	/**
@@ -47,6 +60,17 @@ public class EmployeeInMemoryRepositoryTest {
 	 */
 	@Test
 	public void testEmployeeRepositorySaveNewEmployee() {
+
+		//creo otro empleado
+		Employee empleadoSalvar = new Employee("1", 50.00);
+
+		//lo salvo
+		employeeRepository.save(empleadoSalvar);
+
+		//compruebo que está en la lista
+		assertThat(employeeRepository.findAll()).contains(empleadoSalvar);
+
+
 
 	}
 
@@ -61,6 +85,42 @@ public class EmployeeInMemoryRepositoryTest {
 	 */
 	@Test
 	public void testEmployeeRepositorySaveExistingEmployee() {
+//reutilizo código:
+
+		//creo dos empleados
+		Employee empleado1 = new Employee("1", 50.00);
+		Employee empleado2 = new Employee("2", 150.00);
+
+		//añado a la lista
+		employees.add(empleado1);
+		employees.add(empleado2);
+
+		//compruebo
+		System.out.println(employees.toString());
+
+		//seteo salarios
+		empleado1.setSalary(300);
+		empleado2.setSalary(500);
+
+		//guardo
+		employeeRepository.save(empleado1);
+		employeeRepository.save(empleado2);
+
+
+		//compruebo actualización
+		assertThat(employees.get(0).getSalary()).isEqualTo(300);
+		assertThat(employees.get(1).getSalary()).isEqualTo(500);
+
+
+
+
+
+
+
+
+
+
+
 
 	}
 }
