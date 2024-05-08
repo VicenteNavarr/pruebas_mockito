@@ -289,7 +289,7 @@ public class EmployeeManagerTest {
 
 
 	}
-
+//o
 	/**
 	 * Descripcion del test:
 	 * Utiliza el spy toBePaid de los atributos de esta clase de test para
