@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class EmployeeManagerTest {
@@ -87,8 +88,6 @@ public class EmployeeManagerTest {
 	@Test
 	public void testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee() {
 
-		//Creo el mock
-		EmployeeRepository employeeRepository1 = mock(EmployeeRepository.class);
 
 		//creo un empleado
 		Employee empleado1 = new Employee("1", 50.00);
@@ -100,12 +99,14 @@ public class EmployeeManagerTest {
 
 
 		//verificamos que el banco paga su sueldo al empleado1
-		verify(bankService).pay("1", 50.00);
+		verify(bankService, times(1)).pay("1", 50.00);
 
 
 		//verificamos
 		assertThat(empleado1.isPaid()).isTrue();
 
+		//No mas interacciones
+		verifyNoMoreInteractions(bankService);
 
 
 	}
@@ -128,8 +129,7 @@ public class EmployeeManagerTest {
 
 
 
-		//Creo el mock
-		EmployeeRepository employeeRepository1 = mock(EmployeeRepository.class);
+
 
 		//creo un empleado
 		Employee empleado1 = new Employee("1", 50.00);
@@ -151,6 +151,10 @@ public class EmployeeManagerTest {
 		assertThat(empleado2.isPaid()).isTrue();
 
 
+		// verify(bankService, times(2)).pay(anyString(), anyDouble()); ...para muchos empleados
+
+		//No mas interacciones
+		verifyNoMoreInteractions(bankService);
 
 	}
 
@@ -168,24 +172,22 @@ public class EmployeeManagerTest {
 	public void testPayEmployeesInOrderWhenSeveralEmployeeArePresent() {
 	//reutilizo codigo:
 
-
-
-		//Creo el mock
-		EmployeeRepository employeeRepository1 = mock(EmployeeRepository.class);
-
 		//creo un empleado
 		Employee empleado1 = new Employee("1", 50.00);
 		Employee empleado2 = new Employee("2", 150.00);
 
-		when(employeeRepository.findAll()).thenReturn(asList(empleado1, empleado2));
+		List<Employee>lista = Arrays.asList(empleado1, empleado2);
+
+		when(employeeRepository.findAll()).thenReturn(lista);
 
 		//pagamos
-		employeeManager.payEmployees();
+		assertThat(employeeManager.payEmployees()).isEqualTo(2);
+
 
 
 		//verificamos pago en orden -- Necesitamos instanciar un objeto de In Order para comprobar.
 		// Si lo hacemos por separado no comprueba el orden -->hacerlo con mockito(no lo sabía)
-		InOrder orden = Mockito.inOrder(bankService);
+		InOrder orden = inOrder(bankService);
 		orden.verify(bankService).pay("1", 50.00);
 		orden.verify(bankService).pay("2", 150.00);
 
@@ -196,6 +198,9 @@ public class EmployeeManagerTest {
 		//verificamos no mas interacciones depués de pagar
 		verifyNoMoreInteractions(bankService);
 
+
+		//No mas interacciones
+		verifyNoMoreInteractions(bankService);
 
 	}
 
@@ -208,35 +213,35 @@ public class EmployeeManagerTest {
 	 * las verificaciones (verify).
 	 */
 	@Test
-	public void testExampleOfInOrderWithTwoMocks() {//Este test da fallos y no se porqué
-
-		//Creo el mock
-		EmployeeRepository employeeRepository1 = mock(EmployeeRepository.class);
+	public void testExampleOfInOrderWithTwoMocks() {
 
 		//creo un empleado
 		Employee empleado1 = new Employee("1", 50.00);
 		Employee empleado2 = new Employee("2", 150.00);
 
-		when(employeeRepository.findAll()).thenReturn(asList(empleado1, empleado2));
+		List<Employee>lista = Arrays.asList(empleado1, empleado2);
+
+		when(employeeRepository.findAll()).thenReturn(lista);
 
 		//pagamos
-		employeeManager.payEmployees();
+		assertThat(employeeManager.payEmployees()).isEqualTo(2);
+
+
 
 
 		//verificamos pago en orden -- Necesitamos instanciar un objeto de In Order para comprobar.
 		// Si lo hacemos por separado no comprueba el orden -->hacerlo con mockito(no lo sabía)
-		InOrder inOrder = Mockito.inOrder(employeeRepository1, bankService);
-		inOrder.verify(employeeRepository1).findAll();
+		InOrder inOrder = inOrder(employeeRepository, bankService);
+		inOrder.verify(employeeRepository).findAll();
 		inOrder.verify(bankService).pay("1", 50.00);
-		inOrder.verify(employeeRepository1).findAll();
 		inOrder.verify(bankService).pay("2", 150.00);
+		verifyNoMoreInteractions(bankService);
 
 		//verificamos
 		assertThat(empleado1.isPaid()).isTrue();
 		assertThat(empleado2.isPaid()).isTrue();
 
-		//verificamos no mas interacciones depués de pagar
-		verifyNoMoreInteractions(bankService);
+
 
 
 	}
@@ -258,19 +263,16 @@ public class EmployeeManagerTest {
 	@Test
 	public void testExampleOfArgumentCaptor() {
 
-		//Creo el mock
-		EmployeeRepository employeeRepository1 = mock(EmployeeRepository.class);
-
 		//creo un empleado
 		Employee empleado1 = new Employee("1", 50.00);
 		Employee empleado2 = new Employee("2", 150.00);
 
-		when(employeeRepository.findAll()).thenReturn(asList(empleado1, empleado2));
+		List<Employee>lista = Arrays.asList(empleado1, empleado2);
+
+		when(employeeRepository.findAll()).thenReturn(lista);
 
 		//pagamos
-		employeeManager.payEmployees();
-
-
+		assertThat(employeeManager.payEmployees()).isEqualTo(2);
 
 		//verificamos que el banco paga su sueldo al empleado1
 		verify(bankService).pay("1", 50.00);
@@ -280,7 +282,10 @@ public class EmployeeManagerTest {
 		assertThat(empleado1.isPaid()).isTrue();
 		assertThat(empleado2.isPaid()).isTrue();
 
-		verify(bankService).pay(idCaptor.getValue(empleado1.getId());
+		//captor y amount
+		for (String allValue : idCaptor.getAllValues()) {
+
+		}
 
 
 	}
