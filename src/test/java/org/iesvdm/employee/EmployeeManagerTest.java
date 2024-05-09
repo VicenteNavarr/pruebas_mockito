@@ -278,15 +278,21 @@ public class EmployeeManagerTest {
 		verify(bankService).pay("1", 50.00);
 		verify(bankService).pay("2", 150.00);
 
+
 		//verificamos
 		assertThat(empleado1.isPaid()).isTrue();
 		assertThat(empleado2.isPaid()).isTrue();
 
-		//captor y amount
-		for (String allValue : idCaptor.getAllValues()) {
+		//Comprobamos que el captor contiene los dos empleados y los dos salarios
 
-		}
+		//Primero verificcamos las veces -- no se porque, pero sin esto, los assert de abajo no funcionan...
+		verify(bankService, times(2)).pay(idCaptor.capture(), amountCaptor.capture());
 
+		//comprobamos datos
+		assertThat(idCaptor.getAllValues()).contains(empleado1.getId(), empleado2.getId());
+		assertThat(amountCaptor.getAllValues()).contains(empleado1.getSalary(), empleado2.getSalary());
+
+		verifyNoMoreInteractions(bankService);
 
 	}
 //o
@@ -301,6 +307,31 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testEmployeeSetPaidIsCalledAfterPaying() {
+
+		//Preguntar, el erro me decía que tobepaid no era un mock..pues lo hago mock
+		Employee toBePaid = mock(Employee.class);
+
+
+		//doy valor a los atributos
+		when(toBePaid.getId()).thenReturn("2");
+		when(toBePaid.getSalary()).thenReturn(2000.0);
+
+		//lista
+		List<Employee>lista = Arrays.asList(toBePaid);
+
+		//compruebo lista
+		when(employeeRepository.findAll()).thenReturn(lista);
+
+		//aseguramos un solo pago
+		assertThat(employeeManager.payEmployees()).isEqualTo(1);
+
+		//orden
+		InOrder inOrder = inOrder(bankService, toBePaid);
+
+		inOrder.verify(bankService).pay("2", 2000);
+		inOrder.verify(toBePaid).setPaid(true);
+
+		verifyNoMoreInteractions(bankService);
 
 	}
 
@@ -320,6 +351,30 @@ public class EmployeeManagerTest {
 	@Test
 	public void testPayEmployeesWhenBankServiceThrowsException() {
 
+		//hacemos lo mismo, pero con el not
+		Employee notToBePaid = mock(Employee.class);
+
+
+		//doy valor a los atributos
+		when(notToBePaid.getId()).thenReturn("2");
+		when(notToBePaid.getSalary()).thenReturn(2000.0);
+
+		//lista
+		List<Employee>lista = Arrays.asList(toBePaid);
+
+		//compruebo lista
+		when(employeeRepository.findAll()).thenReturn(lista);
+
+		//Arrroja excepción si pago -- con lo del  argumentmatcher se referia en este caso a los any
+		doThrow(new RuntimeException()).when(bankService).pay(anyString(), anyDouble());
+
+		//ejecutamos para ver la exc.
+		employeeManager.payEmployees();
+
+		assertThat(notToBePaid.isPaid()).isEqualTo(false);
+
+
+
 	}
 
 	/**
@@ -337,6 +392,46 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testOtherEmployeesArePaidWhenBankServiceThrowsException() {
+
+		//reutilizacion codigo
+
+		Employee toBePaid = mock(Employee.class);
+
+		when(toBePaid.getId()).thenReturn("1");
+		when(toBePaid.getSalary()).thenReturn(2000.0);
+
+		Employee notToBePaid = mock(Employee.class);
+
+		when(notToBePaid.getId()).thenReturn("2");
+		when(notToBePaid.getSalary()).thenReturn(3000.0);
+
+
+		//lista
+		List<Employee>lista = Arrays.asList(toBePaid, notToBePaid);
+
+		//compruebo lista
+		when(employeeRepository.findAll()).thenReturn(lista);
+
+
+
+		//exc para el nottobepaid
+		doThrow(new RuntimeException()).when(bankService).pay(eq("2"), anyDouble());
+		//ninguna exc para el tobepaid
+		doNothing().when(bankService).pay((eq("1")), anyDouble());
+
+
+		// Llam0
+		int paidEmployees = employeeManager.payEmployees();
+
+		// verifico solo un pago
+		assertThat(paidEmployees).isEqualTo(1);
+
+
+		verify(notToBePaid).setPaid(false);
+		verify(toBePaid).setPaid(true);
+
+
+
 	}
 
 
@@ -356,6 +451,39 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testArgumentMatcherExample() {
+
+		//reutilizacion codigo
+
+		Employee toBePaid = mock(Employee.class);
+
+		when(toBePaid.getId()).thenReturn("1");
+		when(toBePaid.getSalary()).thenReturn(2000.0);
+
+		Employee notToBePaid = mock(Employee.class);
+
+		when(notToBePaid.getId()).thenReturn("2");
+		when(notToBePaid.getSalary()).thenReturn(3000.0);
+
+
+		//lista
+		List<Employee>lista = Arrays.asList(toBePaid, notToBePaid);
+
+		//compruebo lista
+		when(employeeRepository.findAll()).thenReturn(lista);
+
+		doThrow(new RuntimeException()).when(bankService).pay(argThat(s -> s.equals("2")), anyDouble());
+		doNothing().when(bankService).pay(argThat(s -> s.equals("1")), anyDouble());
+
+
+		int paidEmployees = employeeManager.payEmployees();
+
+
+		assertThat(paidEmployees).isEqualTo(1);
+
+
+		verify(notToBePaid).setPaid(false);
+		verify(toBePaid).setPaid(true);
+
 
 	}
 
