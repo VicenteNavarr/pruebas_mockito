@@ -1,0 +1,177 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_21\" default=\"true\" project-jdk-name=\"openjdk-21 (3)\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"jpab\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 3950989127e8e250abb182a0a4036812282bc40d)
++++ b/.idea/misc.xml	(date 1715273833770)
+@@ -1,3 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
+@@ -7,7 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21 (3)" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-21 (3)" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+   <component name="ProjectType">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AnalysisUIOptions\">\r\n    <option name=\"ANALYZE_INJECTED_CODE\" value=\"false\" />\r\n    <option name=\"SCOPE_TYPE\" value=\"3\" />\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5c399beb-7381-4adb-ab43-564baa14b56b\" name=\"Changes\" comment=\"Actualizaciones a la teoría de mockito\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0-sources.jar!/org/mockito/ArgumentMatchers.java\" root0=\"SKIP_INSPECTION\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2er4lv2Wzi9KZi4Y9JyIc0ubF3Q\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/usuario/IdeaProjects/proyecto_mockito/src\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\r\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\usuario\\IdeaProjects\\proyecto_mockito\\src\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"org.iesvdm.dominio\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.ArgumentMatcherTest.anyArgumentTest\">\r\n    <configuration name=\"ArgumentMatcherTest.anyAndAdditionalArgumentMatchersTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"proyecto_mockito\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.iesvdm.dominio.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"org.iesvdm.dominio\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.iesvdm.dominio.ArgumentMatcherTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"anyAndAdditionalArgumentMatchersTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ArgumentMatcherTest.anyArgumentTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"proyecto_mockito\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.iesvdm.dominio.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"org.iesvdm.dominio\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.iesvdm.dominio.ArgumentMatcherTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"anyArgumentTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MockMethodsTest.whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"proyecto_mockito\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.iesvdm.dominio.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"org.iesvdm.dominio\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.iesvdm.dominio.MockMethodsTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MockVsSpyTest.whenThenReturn\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"proyecto_mockito\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.iesvdm.dominio.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"org.iesvdm.dominio\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.iesvdm.dominio.MockVsSpyTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"whenThenReturn\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VerifyTest.givenInteractionsInOrder_whenVerifyingOrderOfInteractions_thenCorrect\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"proyecto_mockito\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.iesvdm.dominio.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"org.iesvdm.dominio\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.iesvdm.dominio.VerifyTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"givenInteractionsInOrder_whenVerifyingOrderOfInteractions_thenCorrect\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.ArgumentMatcherTest.anyArgumentTest\" />\r\n        <item itemvalue=\"JUnit.ArgumentMatcherTest.anyAndAdditionalArgumentMatchersTest\" />\r\n        <item itemvalue=\"JUnit.VerifyTest.givenInteractionsInOrder_whenVerifyingOrderOfInteractions_thenCorrect\" />\r\n        <item itemvalue=\"JUnit.MockMethodsTest.whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled\" />\r\n        <item itemvalue=\"JUnit.MockVsSpyTest.whenThenReturn\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5c399beb-7381-4adb-ab43-564baa14b56b\" name=\"Changes\" comment=\"\" />\r\n      <created>1712649524267</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1712649524267</updated>\r\n      <workItem from=\"1712649525551\" duration=\"14189000\" />\r\n      <workItem from=\"1712759577189\" duration=\"4130000\" />\r\n      <workItem from=\"1712820797394\" duration=\"13021000\" />\r\n      <workItem from=\"1712905273657\" duration=\"2892000\" />\r\n      <workItem from=\"1712940548762\" duration=\"12792000\" />\r\n      <workItem from=\"1713177366619\" duration=\"8742000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"inicial\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712737096178</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712737096178</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"teoría de mockito\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712822906809</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712822906809</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Actualizaciones a la teoría de mockito\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712990083710</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712990083710</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Actualizaciones a la teoría de mockito\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713253920553</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713253920554</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"inicial\" />\r\n    <MESSAGE value=\"teoría de mockito\" />\r\n    <MESSAGE value=\"Actualizaciones a la teoría de mockito\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Actualizaciones a la teoría de mockito\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/dominio/MockVsSpyTest.java</url>\r\n          <line>20</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/dominio/MockVsSpyTest.java</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/dominio/MockVsSpyTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/dominio/MockVsSpyTest.java</url>\r\n          <line>131</line>\r\n          <option name=\"timeStamp\" value=\"10\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/dominio/MockVsSpyTest.java</url>\r\n          <line>129</line>\r\n          <option name=\"timeStamp\" value=\"13\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/org/iesvdm/dominio/MockVsSpyTest.java</url>\r\n          <line>48</line>\r\n          <option name=\"timeStamp\" value=\"14\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3950989127e8e250abb182a0a4036812282bc40d)
++++ b/.idea/workspace.xml	(date 1715273833762)
+@@ -8,7 +8,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5c399beb-7381-4adb-ab43-564baa14b56b" name="Changes" comment="Actualizaciones a la teoría de mockito">
++    <list default="true" id="5c399beb-7381-4adb-ab43-564baa14b56b" name="Changes" comment="Actualizacion empleyeeMemoryTests">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_5_24_11_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_5_24_11_14__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_5_24_11_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_5_24_11_15__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java" afterDir="false" />
+     </list>
+@@ -25,6 +27,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="feature-test-employee" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="HighlightingSettingsPerFile">
+@@ -39,25 +46,40 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/usuario/IdeaProjects/proyecto_mockito/src",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0",
+-    "run.code.analysis.last.selected.profile": "pProject Default",
+-    "settings.editor.selected.configurable": "preferences.lookFeel",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;JUnit.EmployeeInMemoryRepositoryTest.testEmployeeRepositoryFindAll.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeInMemoryRepositoryTest.testEmployeeRepositorySaveExistingEmployee.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeInMemoryRepositoryTest.testEmployeeRepositorySaveNewEmployee.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testEmployeeSetPaidIsCalledAfterPaying.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testExampleOfArgumentCaptor.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testExampleOfInOrderWithTwoMocks.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testOtherEmployeesArePaidWhenBankServiceThrowsException.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testPayEmployeesInOrderWhenSeveralEmployeeArePresent.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testPayEmployeesReturnZeroWhenNoEmployeesArePresent.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testPayEmployeesWhenBankServiceThrowsException.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.EmployeeManagerTest.testPayEmployeesWhenSeveralEmployeeArePresent.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;feature-test-employee&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/IdeaProjects/proyecto_mockito/src&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\usuario\IdeaProjects\proyecto_mockito\src" />
+@@ -149,14 +171,22 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.ArgumentMatcherTest.anyArgumentTest" />
+-        <item itemvalue="JUnit.ArgumentMatcherTest.anyAndAdditionalArgumentMatchersTest" />
+         <item itemvalue="JUnit.VerifyTest.givenInteractionsInOrder_whenVerifyingOrderOfInteractions_thenCorrect" />
+-        <item itemvalue="JUnit.MockMethodsTest.whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled" />
+         <item itemvalue="JUnit.MockVsSpyTest.whenThenReturn" />
++        <item itemvalue="JUnit.MockMethodsTest.whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled" />
++        <item itemvalue="JUnit.ArgumentMatcherTest.anyArgumentTest" />
++        <item itemvalue="JUnit.ArgumentMatcherTest.anyAndAdditionalArgumentMatchersTest" />
+       </list>
+     </recent_temporary>
+   </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
++        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
++      </set>
++    </attachedChunks>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -171,6 +201,7 @@
+       <workItem from="1712905273657" duration="2892000" />
+       <workItem from="1712940548762" duration="12792000" />
+       <workItem from="1713177366619" duration="8742000" />
++      <workItem from="1715008113505" duration="8319000" />
+     </task>
+     <task id="LOCAL-00001" summary="inicial">
+       <option name="closed" value="true" />
+@@ -204,7 +235,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1713253920554</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="Actualizacion empleyeeMemoryTests">
++      <option name="closed" value="true" />
++      <created>1715010264675</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1715010264675</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -225,7 +264,8 @@
+     <MESSAGE value="inicial" />
+     <MESSAGE value="teoría de mockito" />
+     <MESSAGE value="Actualizaciones a la teoría de mockito" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Actualizaciones a la teoría de mockito" />
++    <MESSAGE value="Actualizacion empleyeeMemoryTests" />
++    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion empleyeeMemoryTests" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
